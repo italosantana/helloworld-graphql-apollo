@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>PokeJava | Seu pokemon!</title>
+
+		<style>
+
+		input {
+			text-align: center;
+			font-size: 40px;
+			border: 4px solid;
+  			border-radius: 25px;
+		}
+
+		img {
+			margin: 20px 10px -20px;
+		}
+			.flex-container {
+			  display: flex;
+			  flex-direction: column;
+			  background-color: DodgerBlue;
+			  width: 100%;
+			  height: 800px;
+			}
+
+			.flex-container > div {
+			  background-color: #f1f1f1;
+			  width: 100%;
+			  margin: 1px;
+			  text-align: center;
+			  line-height: 75px;
+			  font-size: 30px;
+			}
+
+			.flex-container > #campoBuscar{
+				background-color: #403B6A;
+				padding: 2px 30px;
+			}
+			
+			.flex-container > #campoPokemon{
+				height: 100%;
+				width: 100%;
+			}
+</style>
+</head>
+<body>
+	<div class="flex-container">
+		  <div id="campoBuscar">
+		  		<img src="https://pokedex-vue-rho.vercel.app/img/pokedex-icon.baf3d283.webp" alt="Girl in a jacket" width="100" height="100">	
+		  		<label for="campoBuscar"></label>
+		<input type="search" id="campoBuscar" name="campoBuscar" placeholder="Procure um pokémon">
+		  	</div>
+		  		<div id="campoPokemon">Poke aqui!</div>  
+			</div>
+
+</body>
+</html>
