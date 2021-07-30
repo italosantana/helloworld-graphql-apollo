@@ -6,14 +6,12 @@ const resolvers = {
             return 'World';
         }
     }
-
 }
 const typeDefs = gql `
     type Query {
         hello: String
     }
 `
-
 
 const server = new ApolloServer({
     typeDefs,
