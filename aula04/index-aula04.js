@@ -6,6 +6,36 @@ const { gql, ApolloServer } = require("apollo-server")
  *  => SDL
  */
 
+const produtos = [
+                    {
+                        id: 1,
+                        nome: 'Notebok',
+                        valor: 4400.21
+                    },
+                    {
+                        id: 2,
+                        nome: 'TV',
+                        valor: 2100.21
+                    }
+                ];
+
+const usuarios = [
+        {
+            id: 1,
+            nome: 'GraphQL',
+            ativo: true,
+            idade: 10,
+            salario: 999
+        },
+        {   
+            id: 2,
+            nome: 'Backend',
+            ativo: false,
+            idade: 5,
+            salario: 6969
+        }
+];                
+
 const typeDefs = gql `
 
     type Produto    {
@@ -22,28 +52,18 @@ const typeDefs = gql `
         id: ID
     }
     type Query {
-        usuario: Usuario
-        produto: Produto
+        usuarios: [Usuario]
+        produtos: [Produto]
       }
 `;
 
 const resolvers = {
     Query: {
-       usuario(){
-               return {
-                    id: 1,
-                    nome: 'Paulo',
-                    salario: 1234.54,
-                    ativo: true,
-                    idade: 23
-                };
+       usuarios(){
+               return usuarios;
        },
-       produto(){
-             return {
-                    id: 1,
-                    nome: 'Notebok',
-                    valor: 4400.21
-             };
+       produtos(){
+             return produtos;
        }
     }
 };
